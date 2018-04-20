@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-rem="375">
+
+<head>
+  <title>广西北海汉立气体</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta http-equiv="pragma" content="no-cache" />
+  <script type="text/javascript">
+      function browserRedirect() {
+          var sUserAgent = navigator.userAgent.toLowerCase();
+          var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+          var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+          var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+          var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+          var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+          var bIsAndroid = sUserAgent.match(/android/i) == "android";
+          var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+          var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+          if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+              window.location.href = 'http://m.hanligas.com'
+          } else {
+              //window.location.href='index.html';
+              // window.location.href = 'http://www.hanligas.com'
+          }
+      }
+
+      browserRedirect();
+  </script>
+  <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.min.js"></script>
+  <link href="./static/css/style-hanli.css" rel="stylesheet">
+  <style>
+    .bg-box-1,
+    .bg-box-2,
+    .bg-box-3,
+    .bg-box-4 {
+      opacity: 0.4;
+    }
+    .bg-box-1{
+       background: url('https://ws2.sinaimg.cn/large/006tKfTcgy1fi5cr204mkj30zk0qoaer.jpg') no-repeat center/cover; 
+    }
+    .bg-box-2{
+       background: url('https://ws3.sinaimg.cn/large/006tKfTcgy1fi5cramr4bj30zk0qoae5.jpg') no-repeat center/cover; 
+    }
+    .bg-box-3{
+       background: url('https://ws3.sinaimg.cn/large/006tKfTcgy1fi5cturwcbj30zk0qo78w.jpg') no-repeat center/cover; 
+    }
+    .bg-box-4{
+       background: url('https://ws2.sinaimg.cn/large/006tKfTcgy1fi5cu6su5pj30zk0qo788.jpg') no-repeat center/cover; 
+    }
+    #wrap > ul > li:nth-child(1){
+      background: url('https://ws2.sinaimg.cn/large/006tKfTcgy1fi5cr204mkj30zk0qoaer.jpg') no-repeat center/cover;
+    }
+    #wrap > ul > li:nth-child(2){
+      background: url('https://ws3.sinaimg.cn/large/006tKfTcgy1fi5cramr4bj30zk0qoae5.jpg') no-repeat center/cover;
+    }
+    #wrap > ul > li:nth-child(3){
+      background: url('https://ws3.sinaimg.cn/large/006tKfTcgy1fi5cturwcbj30zk0qo78w.jpg') no-repeat center/cover;
+    }
+    #wrap > ul > li:nth-child(4){
+      background: url('https://ws2.sinaimg.cn/large/006tKfTcgy1fi5cu6su5pj30zk0qo788.jpg') no-repeat center/cover;
+      width: 700px;
+    }	    
+  </style>
+</head>
+
+<body>
+  <div id="app" class="home--container">
+    <div class="title--bar insetshadow">
+      <img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fi6oinborwj30hs0hsdgh.jpg" alt="" class="title--left-part">
+      <p class="title">广西北海汉立商贸有限公司</p>
+      <p class="subtitle">联系方式:15907794482  传真:07793233203 邮箱: 1978527741@qq.com</p>
+    </div>
+    <div class="nav-bar--container">
+      <div @click="changeNavBlock1" class="nav--item"><div>公司简介</div></div>
+      <div @click="changeNavBlock2" class="nav--item"><div>公司资质</div></div>
+      <div @click="changeNavBlock6" class="nav--item"><div>质量体系认证</div></div>
+      <div @click="changeNavBlock3" class="nav--item"><div>装备能力一览表</div></div>
+      <div @click="changeNavBlock4" class="nav--item"><div>检测设备一览表</div></div>
+      <div @click="changeNavBlock5" class="nav--item"><div>公司足迹</div></div>
+      <!-- <div @click="changeNavBlock6" class="nav--item"><div>合作伙伴</div></div> -->
+    </div>
+    <div class="carousel">
+      <div class="bg bg-box-1"></div>
+      <div class="bg bg-box-2"></div>
+      <div class="bg bg-box-3"></div>
+      <div class="bg bg-box-4"></div>
+      <div id="wrap">
+        <ul>
+          <li>
+            <div class="text">
+              <p></p>
+            </div>
+          </li>
+          <li>
+            <div class="text">
+              <p></p>
+            </div>
+          </li>
+          <li>
+            <div class="text">
+              <p></p>
+            </div>
+          </li>
+          <li class="curr">
+            <div class="text">
+              <p></p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="guide--content clearfix" style="background-color: rgb(78, 78, 78)">
+      <div class="content--title">公司简介</div>
+      <p class="desc">
+        广西北海汉立商贸有限公司成立于2013年8月，注册地在北海市，注册资金贰佰万圆人民币。公司现有员工86人，其中具有中、高级职称专业技术人员7人。主要经营：液（气）氧、液（气）氩、液（气）氮、二氧化碳、氦气、氢气、各类混合气体、高纯气体、工业燃气、天然气、液氨及各类酸碱化工产品；各类气瓶、机电设备、一般商品和技术进出口业务。公司旗下有两个全资子公司：北海汉立运输有限公司和北海汉立特种设备技术咨询服务有限公司。<br>
+      </p>
+      <p class="desc">
+        北海汉立运输有限公司经营普通货运和二类、三类危化品运输。自有22.1立方至35立方的各类低温液体运输槽车24台，危险化学品厢式货车10台。主要经营液态氧/氩/氮/二氧化碳/液氨运输和各类瓶装工业气体运输。<br>
+      </p>
+      <p class="desc">
+        北海汉立特种设备技术咨询服务有限公司主要经营各类气体的推广应用，供气系统的成套设计、安装及专业的售后服务，低温储槽维修维护、压力容器及管道检测、置换、防腐氮封、预冷等业务。<br>
+      </p>
+      <p class="desc">
+        公司在广西来宾市投资建设了一套3000/1500/90全液化空分，日常具备1000Nm3液氧、600Nm3液氮、300Nm3液氩的生产和储备；在钦州、北海各建设有生产、经营各类特种气体、溶解乙炔、工业燃气及各种普通工业气体充装站。<br>
+      </p>
+      <p class="desc">公司经营理念：安全第一、质量至上、优质服务、合作共赢。</p>
+      <p class="desc">欢迎惠顾。</p>
+      <br>
+      <p class="desc">广西北海汉立商贸有限公司</p>
+      <p class="desc">二〇一七年八月二十五日</p>
+      <!-- <p class="desc">
+        公司拥有各类专业技术人才，专业结构合理，从业经验丰富，能承接各类
+        气体运用业务，公司拥有20000Nm³/h 空温式汽化器、5000L/h高压泵、
+        10000Nm³/h 气体加热器、真空泵(真空检测设备)及各种规格成套管道连接设
+        备等，能安全高效完成客户的需求。<br>
+      </p>
+      <p class="desc">
+        因为专注，所以专业!没有最好，只有更好!我们期待能为客户提供更好
+        的服务!客户的需求是我们团队努力追求的目标!
+      </p> -->
+    </div>
+    <div class="main--content clearfix">
+      <div class="content--title">公司资质</div>
+      <div class="card--container">
+        <a href="https://ws4.sinaimg.cn/large/006tKfTcgy1fi5ibr5nrcj314a1gqjye.jpg">
+          <img src="https://ws4.sinaimg.cn/large/006tKfTcgy1fi5ibr5nrcj314a1gqjye.jpg" alt="" class="card--img">
+        </a>
+      </div>
+      <div class="card--container">
+        <a href="https://ws1.sinaimg.cn/large/006tKfTcgy1fi5icoel70j314a1gsjzl.jpg">
+          <img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fi5icoel70j314a1gsjzl.jpg" alt="" class="card--img">
+        </a>
+      </div>
+      <div class="card--container">
+        <a href="https://ws3.sinaimg.cn/large/006tKfTcgy1fi5id3hs5jj311e1d2af6.jpg">      
+          <img src="https://ws3.sinaimg.cn/large/006tKfTcgy1fi5id3hs5jj311e1d2af6.jpg" alt="" class="card--img">
+        </a>
+      </div>
+      <div class="card--container">
+        <a href="https://ws1.sinaimg.cn/large/006tKfTcgy1fi5ig61dgyj314a1gswme.jpg">      
+          <img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fi5ig61dgyj314a1gswme.jpg" alt="" class="card--img">
+        </a>
+      </div>
+      <div class="card--container">
+        <a href="https://ws4.sinaimg.cn/large/006tKfTcgy1fi5igg5fi7j31161cq7aa.jpg">
+          <img src="https://ws4.sinaimg.cn/large/006tKfTcgy1fi5igg5fi7j31161cq7aa.jpg" alt="" class="card--img">
+        </a>
+      </div>
+    </div>
+    <div class="main--content zhiliang clearfix">
+      <div class="content--title">质量体系认证</div>
+      <div class="card--container">
+        <a href="https://ws2.sinaimg.cn/large/006tKfTcgy1fil4fhpd9gj30fk0liabo.jpg">
+          <img src="https://ws2.sinaimg.cn/large/006tKfTcgy1fil4fhpd9gj30fk0liabo.jpg" alt="" class="card--img">
+        </a>
+      </div>
+      <div class="card--container">
+        <a href="https://ws3.sinaimg.cn/large/006tKfTcgy1fil4fn6nx2j30fk0litaa.jpg">
+          <img src="https://ws3.sinaimg.cn/large/006tKfTcgy1fil4fn6nx2j30fk0litaa.jpg" alt="" class="card--img">
+        </a>
+      </div>
+      <div class="card--container">
+        <a href="https://ws4.sinaimg.cn/large/006tKfTcgy1fil4fuh3n5j30fk0lj0tx.jpg">      
+          <img src="https://ws4.sinaimg.cn/large/006tKfTcgy1fil4fuh3n5j30fk0lj0tx.jpg" alt="" class="card--img">
+        </a>
+      </div>
+    </div>
+    <div class="devices--container">
+      <div class="content--title">装备能力一览表</div>
+      <div class="devices--list-container">
+        <span class="name">装备名称</span>
+        <span class="size">规格型号</span>
+        <span class="number">数量</span>
+        <span class="status">技术状况</span>
+        <span class="date">投入时间</span>
+      </div>
+      <div class="devices--list-container" v-for="item in devices_list">
+        <span class="name">{{item.name}}</span>
+        <span class="size">{{item.type}}</span>
+        <span class="number">{{item.number}}</span>
+        <span class="status">{{item.status}}</span>
+        <span class="date">{{item.start_time}}</span>
+      </div>
+    </div>
+    <div class="devices2--container">
+      <div class="content--title">检测设备一览表</div>
+      <div class="devices--list-container">
+        <span class="name">名称</span>
+        <span class="size">规格型号</span>
+        <span class="number">数量</span>
+        <span class="status">性能说明</span>
+      </div>
+      <div class="devices--list-container" v-for="item in devices2_list">
+        <span class="name">{{item.name}}</span>
+        <span class="size">{{item.type}}</span>
+        <span class="number">{{item.number}}</span>
+        <span class="status">{{item.status}}</span>
+      </div>
+    </div>
+    <div class="history--container swiper-container swiper-container-horizontal">
+      <div class="content--title">公司足迹</div>
+      <div class="swipper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" v-for="item in img_list">
+            <a :href="item.url">
+              <img :src="item.url" alt="">
+              <div class="desc">
+                {{item.desc1}}
+              </div>
+              <div class="desc2">
+                {{item.desc2}}
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="icp--container" style="background-color: #3a3a3a; color: #edeace; text-align: center; font-size: .5rem; padding: 2rem 0;">
+      <a style="color: inherit; text-decoration: none; opacity: 0.6;" target="_blank" href="http://www.miibeian.gov.cn/">备案/许可证编号为：桂ICP备18000985号</a>
+      <p style="opacity: 0.6;">© 广西北海汉立气体</p>
+    </div>
+    <section class="contact--content" style="z-index: 2;">
+      <div class="contact-content--right-part" style="position: relative;bottom: 1rem;">联系我们</div>
+      <div class="contact-content--left-part">
+        <div class="item--content"><span class="title">韩国林(执行董事)</span><br><span class="subtitle">15907794482</span></div>
+        <div class="item--content"><span class="title">郭波祥(总经理)</span><br><span class="subtitle">13977237725</span></div>
+        <div class="item--content"><span class="title">庞如佳(特种设备经理)</span><br><span class="subtitle">13877781953</span></div>
+      </div>
+    </section>
+  </div>
+</body>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script>
+  if (document.body.clientWidth < 630) {
+    window.location.href = 'http://m.hanligas.com'
+  }
+</script>
+ <script src="./static/js/jquery-pin.js"></script> 
+<script src="./static/js/jquery-rebox.js"></script>
+<script src="./static/js/jquery-litelighter.js"></script>
+<script src="./static/js/swiper-3.4.2.jquery.min.js"></script>
+<script>
+  jQuery(function ($) {
+      $(".nav-bar--container").pin()    
+      // $('.nav--item').click(function() {
+      //   $('.nav--item').removeClass('active')
+      //   $(this).addClass('active')
+      // })
+      // var swiper = new Swiper('.history--container', {
+      //   pagination: '.swiper-pagination',
+      //   slidesPerView: 'auto',
+      //   centeredSlides: true,
+      //   paginationClickable: true,
+      //   spaceBetween: 30
+      // });      
+
+      var swiper = new Swiper('.swipper-container', {
+        // pagination: '.swiper-pagination',
+        // paginationClickable: true,
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+        width: 500,
+        // freeMode: true,
+        autoplay: 6000,
+        slidesPerGroup: 3
+      });
+    });
+</script>
+
+<script>
+  var vm = new Vue({
+    el: '#app',
+    data() {
+      return {
+        tester_list: [],
+        devices_list: [],
+        devices2_list: [],
+        img_list: [
+          {
+            url: 'https://ws4.sinaimg.cn/large/006tNc79gy1fiikm62h62j30jn0dl3zn.jpg',
+            desc1: '贵港站压缩机干气密封试运转投产施工现场',
+            desc2: '(Q≥5000Nm3/h,T=50°C,P=10MPa)'
+          },
+          {
+            url: 'https://ws3.sinaimg.cn/large/006tKfTcgy1fi90wxtvpvj307d05caa5.jpg',
+            desc1: '贵港站压缩机干气密封试运转投产施工现场',
+            desc2: '(Q≥5000Nm3/h,T=50°C,P=10MPa)'
+          },
+          {
+            url: 'https://ws3.sinaimg.cn/large/006tNc79gy1fiiks3hr9nj30hm0dxjsj.jpg',
+            desc1: '河池站 DN1000*2 绝缘头更换注氮置换现场',
+            desc2: '(Q>6000Nm3/h,T≥5°C)'
+          },
+          {
+            url: 'https://ws2.sinaimg.cn/large/006tNc79gy1fiiksaqs14j30kf0e0t9p.jpg',
+            desc1: '河池站 DN1000*2 绝缘头更换注氮置换现场',
+            desc2: '(Q>6000Nm3/h,T≥5°C)'
+          },
+          {
+            url: 'https://ws4.sinaimg.cn/large/006tNc79gy1fiiksi5e2pj30j90ei0u7.jpg',
+            desc1: '合作站点',
+            desc2: ''
+          },
+          {
+            url: 'https://ws3.sinaimg.cn/large/006tNc79gy1fiiksqeqsfj30ji0eiac0.jpg',
+            desc1: '合作站点',
+            desc2: ''
+          },
+          {
+            url: 'https://ws3.sinaimg.cn/large/006tNc79gy1fiiksymqlbj30ja0d5abk.jpg',
+            desc1: '合作站点',
+            desc2: ''
+          },
+          {
+            url: 'https://ws1.sinaimg.cn/large/006tNc79gy1fiikt627e8j30iw0cz0uk.jpg',
+            desc1: '团队风采',
+            desc2: ''
+          },
+          {
+            url: 'https://ws1.sinaimg.cn/large/006tNc79gy1fiikte1l0pj30jg0emgo6.jpg',
+            desc1: '团队风采',
+            desc2: ''
+          },
+          {
+            url: 'https://ws1.sinaimg.cn/large/006tNc79gy1fiiktk9c0zj30iu0evq53.jpg',
+            desc1: '团队风采',
+            desc2: ''
+          },
+          {
+            url: 'https://ws3.sinaimg.cn/large/006tNc79gy1fiiku08vbij30ir0c9758.jpg',
+            desc1: '装备实拍',
+            desc2: ''
+          },
+          {
+            url: 'https://ws3.sinaimg.cn/large/006tNc79gy1fiiku5lu1nj30iv0cgwfb.jpg',
+            desc1: '装备实拍',
+            desc2: ''
+          },
+          {
+            url: 'https://ws4.sinaimg.cn/large/006tNc79gy1fiikuazwawj30iv0eejtm.jpg',
+            desc1: '合作站点',
+            desc2: ''
+          },
+          {
+            url: 'https://ws2.sinaimg.cn/large/006tNc79gy1fiikug88wtj30j00eaq4n.jpg',
+            desc1: '合作站点',
+            desc2: ''
+          },
+          {
+            url: 'https://ws3.sinaimg.cn/large/006tNc79gy1fiikunrpeyj30jl0frdhh.jpg',
+            desc1: '合作站点',
+            desc2: ''
+          },
+          {
+            url: 'https://ws3.sinaimg.cn/large/006tNc79gy1fiikuyz4jdj30ir0fpgmt.jpg',
+            desc1: '合作站点',
+            desc2: ''
+          },
+          {
+            url: 'https://ws3.sinaimg.cn/large/006tNc79gy1fiikvf8kt0j30jk0fwdhs.jpg',
+            desc1: '合作站点',
+            desc2: ''
+          },
+          {
+            url: 'https://ws2.sinaimg.cn/large/006tNc79gy1fiikvk7kvtj30it0fgdgg.jpg',
+            desc1: '合作站点',
+            desc2: ''
+          },
+          {
+            url: 'https://ws3.sinaimg.cn/large/006tNc79gy1fiikvs02ebj30jl0fpwgd.jpg',
+            desc1: '北海新绎旅游船舶技改项目液氮预冷现场',
+            desc2: ''
+          },
+          {
+            url: 'https://ws4.sinaimg.cn/large/006tNc79gy1fiikvy5c8ij30kg0fr0ud.jpg',
+            desc1: '北海新绎旅游船舶技改项目液氮预冷现场',
+            desc2: ''
+          },
+          {
+            url: 'https://ws3.sinaimg.cn/large/006tNc79gy1fiikw5frvyj30jo0fqdhu.jpg',
+            desc1: '中石化北海 LNG 储罐预冷现场',
+            desc2: ''
+          },
+          {
+            url: 'https://ws1.sinaimg.cn/large/006tNc79gy1fiikwca7grj30ji0fwac4.jpg',
+            desc1: '中石化北海 LNG 储罐预冷现场',
+            desc2: ''
+          },
+          {
+            url: 'https://ws1.sinaimg.cn/large/006tNc79gy1fiikwk6lttj30ke0fq3zz.jpg',
+            desc1: '中石化 LNG 管道置换预冷现场',
+            desc2: ''
+          },
+          {
+            url: 'https://ws1.sinaimg.cn/large/006tNc79gy1fiikwzlbcwj30jj0e03zt.jpg',
+            desc1: '中石化北海 LNG 施工夜景',
+            desc2: ''
+          },
+          {
+            url: 'https://ws4.sinaimg.cn/large/006tNc79gy1fiikx6iuffj310e0kiq6d.jpg',
+            desc1: '中石化北海 LNG 首站置换施工现场',
+            desc2: ''
+          },
+          {
+            url: 'https://ws1.sinaimg.cn/large/006tNc79gy1fiikxfidbbj30bv0hfgme.jpg',
+            desc1: '储罐吊装',
+            desc2: ''
+          },
+          {
+            url: 'https://ws3.sinaimg.cn/large/006tNc79gy1fiikxla2ukj30bf0hn0us.jpg',
+            desc1: '储罐保养',
+            desc2: ''
+          }
+        ]
+      }
+    },
+    mounted() {
+      $('.card--container a').rebox();
+      $('.swiper-slide a').rebox();
+      this.getTesterList();
+      (function () {
+        $('#wrap li').mouseover(function () {
+          if (!$(this).hasClass('curr')) {
+            $('#wrap li').removeClass('curr');
+            $(this).addClass('curr');
+            // 切换背景
+            $('#wrap li').each(function (index) {
+              if ($(this).hasClass('curr')) {
+                $('.bg').fadeOut(300);
+                $('.bg:eq(' + index + ')').fadeIn(500);
+              }
+            });
+            $('.curr').stop().animate({
+              width: 700
+            }, 500, 'linear');
+            $('#wrap li').not('.curr').stop().animate({
+              width: 100
+            }, 500, 'linear');
+          }
+        });
+      })()
+    },
+    methods: {
+      getTesterList: function() {
+        var _this = this;
+        $.ajax({
+          url: 'http://www.hanligas.com/ajax/get/tester_list',
+          method: 'GET',
+          success: function(res) {
+            _this.devices2_list = res;
+            console.log(_this.devices2_list)
+          }
+        })
+        $.ajax({
+          url: 'http://www.hanligas.com/ajax/get/truck_list',
+          method: 'GET',
+          success: function(res) {
+            _this.devices_list = res;
+            console.log(_this.devices_list)
+          }
+        })
+      },
+      changeNavBlock1: function(e) {
+        $('html,body').animate({scrollTop:$('.guide--content').offset().top}, 800)
+      },
+      changeNavBlock2: function(e) {
+        $('html,body').animate({scrollTop:$('.main--content').offset().top}, 800)
+      },
+      changeNavBlock3: function(e) {
+        $('html,body').animate({scrollTop:$('.devices--container').offset().top}, 800)
+      },
+      changeNavBlock4: function(e) {
+        $('html,body').animate({scrollTop:$('.devices2--container').offset().top}, 800)
+      },
+      changeNavBlock5: function(e) {
+        $('html,body').animate({scrollTop:$('.history--container').offset().top}, 800)
+      },
+      changeNavBlock6: function(e) {
+        $('html,body').animate({scrollTop:$('.zhiliang').offset().top}, 800)
+      }
+    }
+  })
+</script>
+
+</html>
